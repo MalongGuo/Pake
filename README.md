@@ -167,6 +167,8 @@ In addition, double-click the title bar to switch to full-screen mode. For Mac u
 # Install with npm
 npm install -g pake-cli
 
+npm i
+node cli.js https://admin.aisirvip.com/login --name AiSir
 # Command usage
 pake url [OPTIONS]...
 
