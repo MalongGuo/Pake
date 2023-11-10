@@ -54,7 +54,6 @@ jobs:
     runs-on: ${{ inputs.platform }}
     strategy:
       fail-fast: false
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -115,6 +114,7 @@ jobs:
           TRANSPARENT: ${{ inputs.transparent }}
           FULLSCREEN: ${{ inputs.fullscreen }}
           RESIZE: ${{ inputs.resize }}
+
           MULTI_ARCH: ${{ inputs.multi_arch }}
           TARGETS: ${{ inputs.targets }}
 
@@ -122,5 +122,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: output-${{ inputs.platform }}.zip
-          path: node_modules/pake-cli/output/*
+          path: AiSir*
           retention-days: 3
