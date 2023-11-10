@@ -101,12 +101,11 @@ jobs:
         run: |
           npm install shelljs
           npm install axios
+  
       - name: remove
         if: inputs.platform == 'macos-latest'
         run: rm -rf src-tauri/target
-      - name: remove rmdir
-        if: inputs.platform == 'windows-latest'
-        run: dir src-tauri\target
+
       - name: Build with pake-cli
         run: |
           node cli.js https://admin.aisirvip.com/login --name AiSir
