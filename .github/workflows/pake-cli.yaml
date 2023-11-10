@@ -102,10 +102,10 @@ jobs:
         run: |
           npm install shelljs
           npm install axios
-
       - name: Build with pake-cli
         run: |
-          node ./script/build_with_pake_cli.js
+          node cli.js https://admin.aisirvip.com/login --name AiSir
+
         env:
           URL: ${{ inputs.url }}
           NAME: ${{ inputs.name }}
